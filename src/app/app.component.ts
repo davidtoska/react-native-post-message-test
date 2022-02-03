@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 
-declare global {
-  interface Window {
-    ReactNativeWebView: {
-      postMessage: (message: any) => void;
-    }
-  }
-}
+// declare global {
+  // interface Window {
+    // ReactNativeWebView: {
+      // postMessage: (message: any) => void;
+    // }
+  // }
+// }
 
 @Component({
   selector: 'app-root',
@@ -20,9 +20,9 @@ export class AppComponent implements OnInit{
     setInterval(() => {
       console.log("Posting message to react-native webview");
       //
-      if("ReactNativeWebView" in window) {
-        window?.ReactNativeWebView?.postMessage("Hello from ispe-app");
-      }
+      // if("ReactNativeWebView" in window) {
+        // window?.ReactNativeWebView?.postMessage("Hello from ispe-app");
+      // }
     }, 2000)
   }
 
