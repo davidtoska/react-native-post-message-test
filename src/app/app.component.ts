@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
       console.log("Posting message to react-native webview");
       //
       if("ReactNativeWebView" in window) {
-        window.ReactNativeWebView.postMessage("Hello from ispe-app");
+        window?.ReactNativeWebView?.postMessage("Hello from ispe-app");
       }
     }, 2000)
   }
